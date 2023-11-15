@@ -1,38 +1,89 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+p, h1, h2{
+  margin: 0;
+  margin-bottom: 0.5em;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root{
+  --primary: #9BA8D9;
+  --secondary: #3B4EA1;
+  --success: #E2AB9C;
+  --danger: #D17961;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.taglia{
+  clip-path: polygon(0% 0%, 8% 100%, 92% 100%, 100% 0%);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.righteous{
+  font-family: 'Righteous', cursive;
 }
 
-.App-link {
-  color: #61dafb;
+.fonte{
+  color: var(--secondary);
+  font-family: 'Righteous', cursive;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.text-center .fonte:first-child{
+  font-size: 1.5em;
+}
+
+.text-center .fonte:nth-child(2){
+  font-size: 3em;
+}
+
+.linea{
+  bottom: 10%;
+  position: absolute;
+  height: 0.12em;
+  background-color: var(--danger);
+}
+
+
+.chef{
+  background-image: url("./images/chef.jpeg");
+  background-size: cover;
+  background-position: center 5%;
+  width: 100%;
+  height: 70vh;
+  opacity: 0.6;
+
+  position: absolute;
+}
+
+/* ----------------------- */
+
+.lato{
+  transform: rotate(-90deg);
+  height: 4em /* change it in media query */
+}
+
+.gridskill{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(35%, 50%));
+  grid-gap: 25px;
+}
+
+/* ------------------- */
+
+.back{
+  background-size: cover;
+  background-position: center center;
+}
+
+.meno::-webkit-scrollbar{
+  width: 0;
+  height: 0;
+}
+
+/* carousel */
+
+.carousel .carousel-indicators .active{
+  background-color: var(--danger);
+}
+
+.carousel .carousel-indicators button{
+  background-color: var(--success);
 }
