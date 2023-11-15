@@ -31,7 +31,7 @@ function Quarto(){
   const handleShow = () => setShow(true);
 
   return(
-    <div style={{ height: "100vh" }}>
+    <div style={{ height: "60vh" }}>
       
       <div className="row mx-0" style={{ height: "60vh" }}>
         <div className="col-4 p-0 d-flex flex-column" style={{ overflowY: "scroll", height: "inherit" }}>
@@ -63,7 +63,7 @@ function Quarto(){
             onClick={handleShow}> 
           </div>
 
-          <Modal show={show} onHide={handleClose}>
+          <Modal className="d-flex justify-content-center align-items-center" show={show} onHide={handleClose}>
             <Modal.Header closeButton>
             </Modal.Header>
 

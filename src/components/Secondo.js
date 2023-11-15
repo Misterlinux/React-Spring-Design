@@ -26,7 +26,7 @@ function Secondo(){
   })
 
   return(
-    <div style={{ height: "40vh" }}>
+    <div style={{ height: "30vh" }}>
 
       <div className="d-flex justify-content-end position-relative mt-2">
         

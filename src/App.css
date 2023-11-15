@@ -87,3 +87,14 @@ p, h1, h2{
 .carousel .carousel-indicators button{
   background-color: var(--success);
 }
+
+/* footer */
+
+.circleIcon{
+  border: solid 2px var(--primary);
+  position: absolute;
+  border-radius: 100%;
+
+  width: 3.5em;
+  height: 3.5em;
+}
