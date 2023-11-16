@@ -9,7 +9,7 @@ function footer(){
   
 
   return(
-    <div className="position-relative d-flex flex-column align-items-center justify-content-center" style={{ height: "12vh", backgroundColor: "black" }}>
+    <div className="position-relative d-flex flex-column align-items-center justify-content-center" style={{ height: "15vh", backgroundColor: "black" }}>
 
       <div className="d-flex row mx-0 mb-4" style={{ width: "65%" }}>
         <div className="col-4 position-relative d-flex justify-content-center align-items-center">

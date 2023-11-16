@@ -1,4 +1,5 @@
 import { animated, useSpring, useSprings, useInView } from '@react-spring/web'
+import Task, { useStato, useStatodis } from './Context';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFireBurner } from "@fortawesome/free-solid-svg-icons";
@@ -16,6 +17,8 @@ function Terzo(){
     delay: i * 200,
   }), [seeSect])
 
+  let stato = useStato()
+  let dispatch = useStatodis()
 
   return(
     <div style={{ height: "60vh" }}>
@@ -24,83 +27,31 @@ function Terzo(){
 
         <h1 className="text-center fonte">Our Principles</h1>
 
-        <div className="col-4 p-0" style={{height: "100%"}}>
-          <div className="bg-secondary position-relative text-success p-3 d-flex justify-content-center align-item-center"
-            style={{ height: "5em" }}>
+        {stato.fires.map((cont, index)=>(
 
-            <animated.div className='position-absolute border border-4 border-success p-2' 
-              style={{ height: "2.5em", width: "2.5em",...gear[0] }}>  
-            </animated.div>
+          <div className="col-4 p-0">
+            <div className="bg-secondary position-relative text-success p-3 d-flex justify-content-center align-item-center"
+              style={{ height: "5em" }}>
 
-            <div className='position-absolute mt-2'>
-              <FontAwesomeIcon icon={faFireBurner}/>
+              <animated.div className='position-absolute border border-4 border-success p-2' 
+                style={{ height: "2.5em", width: "2.5em",...gear[index] }}>  
+              </animated.div>
+
+              <div className='position-absolute mt-2'>
+                <FontAwesomeIcon icon={faFireBurner}/>
+              </div>
+
             </div>
-
+            <div className="bg-primary p-2" style={{ height: "45vh" }}>
+              <h1> {cont.name} </h1>
+              <p> {cont.text} </p>
+              <div className="text-center">
+                <button className="btn btn-sm btn-danger text-white">See More</button>
+              </div>
+            </div> 
           </div>
-          <div className="bg-primary p-2" style={{ height: "63vh" }}>
-            <h1> Three </h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. E
-              xcepturi odio quisquam natus ad aspernatur 
-              repellat maxime dicta voluptatibus minus numquam.
-            </p>
-            <div className="text-center">
-              <button className="btn btn-sm btn-danger text-white">See More</button>
-            </div>
-          </div> 
-        </div>
 
-
-        <div className="col-4 p-0" style={{height: "100%"}}>
-          <div className="bg-secondary position-relative text-success p-3 d-flex justify-content-center align-item-center"
-            style={{ height: "5em" }}>
-
-            <animated.div className='position-absolute border border-4 border-success p-2' 
-              style={{ height: "2.5em", width: "2.5em",...gear[1] }}>  
-            </animated.div>
-
-            <div className='position-absolute mt-2'>
-              <FontAwesomeIcon icon={faFireBurner}/>
-            </div>
-
-          </div>
-          <div className="bg-primary p-2" style={{ height: "63vh" }}>
-            <h1> Fire </h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-              Excepturi odio quisquam natus ad aspernatur 
-              repellat maxime dicta voluptatibus minus numquam.
-            </p>
-            <div className="text-center">
-              <button className="btn btn-sm btn-danger text-white">See More</button>
-            </div>
-          </div> 
-        </div>
-
-
-        <div className="col-4 p-0" style={{height: "100%"}}>
-          <div className="bg-secondary position-relative text-success p-3 d-flex justify-content-center align-item-center"
-            style={{ height: "5em" }}>
-
-            <animated.div className='position-absolute border border-4 border-success p-2' 
-              style={{ height: "2.5em", width: "2.5em",...gear[2] }}>  
-            </animated.div>
-
-            <div className='position-absolute mt-2'>
-              <FontAwesomeIcon icon={faFireBurner}/>
-            </div>
-
-          </div>
-          <div className="bg-primary p-2" style={{ height: "63vh" }}>
-            <h1> Pits </h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-              Excepturi odio quisquam natus ad aspernatur 
-              repellat maxime dicta voluptatibus minus numquam.
-            </p>
-            <div className="text-center">
-              <button className="btn btn-sm btn-danger text-white">See More</button>
-            </div>
-          </div> 
-        </div>
-
+        ))}
 
       </div>
 

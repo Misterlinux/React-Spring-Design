@@ -1,5 +1,5 @@
 import { useReducer, useContext, createContext} from 'react';
-import { menu, crowd } from '../Articles/Menu';
+import { fuochi, menu, crowd } from '../Articles/Menu';
 
 const Stato = createContext(null);
 const Statodis = createContext(null);
@@ -18,7 +18,7 @@ export default function Task({children}) {
     throw Error('Unknown action: ' + action.type);
   }
 
-  const initialState = { age: 42, name: "testo", meals: menu(), people: crowd()};
+  const initialState = { age: 42, name: "testo", fires: fuochi(), meals: menu(), people: crowd()};
   const [instate, dispatch] = useReducer(reducer, initialState);
   
   return (

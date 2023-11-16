@@ -8,13 +8,23 @@ function Quinto(){
   let stato = useStato()
   let dispatch = useStatodis()
 
+/*
+      <h1 className="text-center text-secondary righteous p-3">
+        Our Testimonials
+      </h1>
+
+*/
+
   return(
     <div>
 
-      <div className="bg-secondary">
-        <h1 className="text-center text-success righteous p-3">Our Testimonials</h1>
+      <h1 className="text-center text-secondary righteous p-2">
+        Our Testimonials
+      </h1>
 
-        <Carousel style={{ height: "37vh" }}>
+      <div className="bg-secondary">
+
+        <Carousel className="py-3" style={{ height: "37vh" }}>
           {stato.people.map((cont, index)=>(
 
             <Carousel.Item key={index} interval={1500}>

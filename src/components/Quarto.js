@@ -31,8 +31,12 @@ function Quarto(){
   const handleShow = () => setShow(true);
 
   return(
-    <div style={{ height: "60vh" }}>
+    <div style={{ height: "68vh" }}>
       
+      <h1 className="righteous text-center text-danger p-2"> 
+        Our Menu 
+      </h1>
+
       <div className="row mx-0" style={{ height: "60vh" }}>
         <div className="col-4 p-0 d-flex flex-column" style={{ overflowY: "scroll", height: "inherit" }}>
         

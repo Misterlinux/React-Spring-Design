@@ -1,5 +1,30 @@
 import { faDrumstickBite, faFish, faCarrot } from "@fortawesome/free-solid-svg-icons";
 
+let fires = [
+  {
+    name: "Three",
+    text: `Lorem ipsum dolor sit amet consectetur adipisicing elit. E
+    xcepturi odio quisquam natus ad aspernatur 
+    repellat maxime dicta voluptatibus minus numquam.`
+  },
+  {
+    name: "Fire",
+    text: `Lorem ipsum dolor sit amet consectetur adipisicing elit. E
+    xcepturi odio quisquam natus ad aspernatur 
+    repellat maxime dicta voluptatibus minus numquam.`
+  },
+  {
+    name: "Pits",
+    text: `Lorem ipsum dolor sit amet consectetur adipisicing elit. E
+    xcepturi odio quisquam natus ad aspernatur 
+    repellat maxime dicta voluptatibus minus numquam.`
+  },
+]
+
+export function fuochi(){
+  return fires;
+}
+
 let meals = [
   {
     name: "Fricassea",
