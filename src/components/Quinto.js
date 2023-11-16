@@ -18,13 +18,13 @@ function Quinto(){
   return(
     <div>
 
-      <h1 className="text-center text-secondary righteous p-2">
+      <h1 className="text-center text-secondary righteous pt-3">
         Our Testimonials
       </h1>
 
       <div className="bg-secondary">
 
-        <Carousel className="py-3" style={{ height: "37vh" }}>
+        <Carousel className="py-3" style={{  }}>
           {stato.people.map((cont, index)=>(
 
             <Carousel.Item key={index} interval={1500}>
@@ -45,6 +45,7 @@ function Quinto(){
                 </div>
               </div>
 
+              <br />
             </Carousel.Item>
           ))}
         </Carousel>

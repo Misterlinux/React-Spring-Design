@@ -31,7 +31,7 @@ function Quarto(){
   const handleShow = () => setShow(true);
 
   return(
-    <div style={{ height: "68vh" }}>
+    <div style={{  }}>
       
       <h1 className="righteous text-center text-danger p-2"> 
         Our Menu 

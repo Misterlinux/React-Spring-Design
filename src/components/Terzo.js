@@ -21,11 +21,11 @@ function Terzo(){
   let dispatch = useStatodis()
 
   return(
-    <div style={{ height: "60vh" }}>
+    <div>
         
       <div className="row mx-0" ref={sect}>
 
-        <h1 className="text-center fonte">Our Principles</h1>
+        <h1 className="text-center fonte mt-2 py-2">Our Principles</h1>
 
         {stato.fires.map((cont, index)=>(
 
@@ -42,10 +42,10 @@ function Terzo(){
               </div>
 
             </div>
-            <div className="bg-primary p-2" style={{ height: "45vh" }}>
+            <div className="bg-primary p-2">
               <h1> {cont.name} </h1>
               <p> {cont.text} </p>
-              <div className="text-center">
+              <div className="text-center mb-2">
                 <button className="btn btn-sm btn-danger text-white">See More</button>
               </div>
             </div> 
