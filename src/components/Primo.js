@@ -36,18 +36,8 @@ import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 
         <div className="chef"></div>
 
-        <div className="position-relative h-100" style={{ zIndex: 2 }}>
+        <div className="position-relative h-100">
 
-        <div className="taglia bg-secondary mx-auto align-self-start w-50">
-        
-          <div className="d-flex justify-content-around px-4 py-2">
-            <div className="text-success">Projects</div>
-            <div className="text-success">Reviews</div>
-            <div className="text-success">Contact me</div>
-          </div>
-
-        </div>
-        
         <div ref={intro} className="d-flex justify-content-center align-items-center" style={{ height: "100%"}}>
           <div className="d-block text-center">
 

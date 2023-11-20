@@ -20,7 +20,6 @@ function Home(){
       <Terzo />
       <Quarto />
       <Quinto />
-      <Footer />
 
     </div>
   )

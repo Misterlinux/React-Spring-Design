@@ -15,12 +15,30 @@ import Secondo from "./components/Secondo";
 import Terzo from "./components/Terzo";
 import Contact from "./components/Contact";
 import "./Global.scss"
+import Footer from "./components/Footer";
 
 function App() {
 
   function Sees(){
     let stato = useStato()
     let dispatch = useStatodis()
+  }
+
+  function Navbar(){
+
+    return( 
+      <div className="d-flex justify-content-center">
+
+      <div className="position-absolute taglia d-flex bg-secondary justify-content-around w-50 px-4 py-2" style={{ zIndex: 2 }}>
+        <div className="text-success">Home</div>
+        <div className="text-success">Menu</div>
+        <Link to="contact"> 
+          <div className="text-success">Contact me</div>
+        </Link>
+      </div>
+
+      </div>
+    )
   }
 
   return (
@@ -32,16 +50,16 @@ function App() {
 
       <Task>
       <Router>
+        <Navbar />
+
         <Routes>
           <Route path="*" element={<Homepage/>} />
           <Route path="contact/*" element={<Contact />} />
         </Routes>
+
+        <Footer />
       </Router>
       </Task>
-
-      <div className='position-fixed bg-secondary w-100 text-center'>
-        Thsi is fondo
-      </div>
 
     </div>
   );

@@ -98,3 +98,15 @@ p, h1, h2{
   width: 3.5em;
   height: 3.5em;
 }
+
+/* Contact.js */
+
+.pic{
+  height: 6.5em;
+  width: 6.5em;
+  border-radius: 100%;
+
+  background-image: url("./images/chef.jpeg");
+  background-size: cover;
+  background-position: center center;
+}
