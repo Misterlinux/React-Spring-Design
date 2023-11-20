@@ -117,8 +117,8 @@ function Contact(){
 
       </div>
 
-      <form className="row mx-0 py-3 bg-danger pb-4" onSubmit={ vediamo } style={{ height: "50vh" }}>
-        <div className="col-5 p-2">
+      <form className="row mx-0 py-3 bg-danger pb-4" onSubmit={ vediamo } style={{ height: "55vh" }}>
+        <div className="col-5 p-2 d-flex flex-column justify-content-center">
           <div className='form-floating'>
             <input name='name' id="nome" required
               type="text" className="form-control" placeholder='name'/>
@@ -131,7 +131,7 @@ function Contact(){
           </div>
         </div>
 
-        <div className="col-7 p-2">
+        <div className="col-7 p-2 d-flex align-items-center justify-content-center">
           <div>
             <textarea name='message' id="message" rows="4" className="form-control" placeholder='Write your commission' required>
             </textarea>
