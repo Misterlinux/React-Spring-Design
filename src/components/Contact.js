@@ -15,13 +15,6 @@ function Contact(){
   let [nome, setNome] = useState("")
   let [nomer, setNomer] = useState(3)
 
-  function iconing(e){
-    e.preventDefault()
-    setNomer(e.target.value)
-
-    //let val = (e.target.value > 2 ) ? console.log("too high") : console.log("fine still")
-  }
-
   let middle = useSpring({
     from: {x: 0},
     to: [
@@ -82,7 +75,6 @@ function Contact(){
       Message: ${message},
       ${ comment }
     `)
-
   }
 
 
@@ -143,12 +135,12 @@ function Contact(){
             Rate the website
             { foodani() }
           </label>
-          <input name='numer' value={nomer} onChange={iconing} id="follow" 
+          <input name='numer' value={nomer} onChange={(e)=> setNomer(e.target.value)} id="follow" 
             min="0" max="10" steps="1" type="range" className="form-range" />
         </div>
       
         <div className="text-center">
-          <button type='submit' className="btn btn-secondary text-white">Send</button>
+          <button type='submit' className="btn p-3 btn-secondary text-white">Send</button>
         </div>
       </form>
 

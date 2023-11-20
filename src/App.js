@@ -16,6 +16,7 @@ import Terzo from "./components/Terzo";
 import Contact from "./components/Contact";
 import "./Global.scss"
 import Footer from "./components/Footer";
+import Values from "./components/Values";
 
 function App() {
 
@@ -30,7 +31,9 @@ function App() {
       <div className="d-flex justify-content-center">
 
       <div className="position-absolute taglia d-flex bg-secondary justify-content-around w-50 px-4 py-2" style={{ zIndex: 2 }}>
-        <div className="text-success">Home</div>
+        <Link to="/">
+          <div className="text-success">Home</div>
+        </Link>
         <div className="text-success">Menu</div>
         <Link to="contact"> 
           <div className="text-success">Contact me</div>
@@ -55,6 +58,7 @@ function App() {
         <Routes>
           <Route path="*" element={<Homepage/>} />
           <Route path="contact/*" element={<Contact />} />
+          <Route path="values/*" element={<Values />} />
         </Routes>
 
         <Footer />

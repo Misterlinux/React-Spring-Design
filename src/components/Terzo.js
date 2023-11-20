@@ -1,5 +1,14 @@
 import { animated, useSpring, useSprings, useInView } from '@react-spring/web'
 import Task, { useStato, useStatodis } from './Context';
+import {
+  BrowserRouter as Router,
+  Link,
+  Route,
+  useParams,
+  Routes,
+  Outlet,
+  useRouteError
+} from "react-router-dom";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFireBurner } from "@fortawesome/free-solid-svg-icons";
@@ -46,7 +55,9 @@ function Terzo(){
               <h1> {cont.name} </h1>
               <p> {cont.text} </p>
               <div className="text-center mb-2">
-                <button className="btn btn-sm btn-danger text-white">See More</button>
+                <Link to="values">
+                  <button className="btn btn-sm btn-danger text-white">See More</button>
+                </Link>
               </div>
             </div> 
           </div>
