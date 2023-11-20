@@ -117,7 +117,7 @@ function Contact(){
 
       </div>
 
-      <form className="row mx-0 py-3 bg-danger pb-4" onSubmit={ vediamo }>
+      <form className="row mx-0 py-3 bg-danger pb-4" onSubmit={ vediamo } style={{ height: "50vh" }}>
         <div className="col-5 p-2">
           <div className='form-floating'>
             <input name='name' id="nome" required
@@ -139,7 +139,7 @@ function Contact(){
         </div>
 
         <div className='text-center'>
-          <label htmlFor="follow" className="form-label d-flex justify-content-center alin-items-center">
+          <label htmlFor="follow" className="form-label text-white d-flex justify-content-center alin-items-center">
             Rate the website
             { foodani() }
           </label>
