@@ -28,21 +28,24 @@ function App() {
 
   function Navbar(){
 
-    return( 
+    return (
       <div className="d-flex justify-content-center">
-
-      <div className="position-absolute taglia d-flex bg-secondary justify-content-around w-50 px-4 py-2" style={{ zIndex: 2 }}>
-        <Link to="/">
-          <div className="text-success">Home</div>
-        </Link>
-        <div className="text-success">Menu</div>
-        <Link to="contact"> 
-          <div className="text-success">Contact me</div>
-        </Link>
+        <div
+          className="position-absolute taglia d-flex bg-secondary justify-content-around w-75 px-4 py-2"
+          style={{ zIndex: 2, textDecoration: "none"}}
+        >
+          <Link to="/">
+            <div className="text-success">Home</div>
+          </Link>
+          <Link to="testimonials">
+            <div className="text-success">Patners</div>
+          </Link>
+          <Link to="contact">
+            <div className="text-success">Contact</div>
+          </Link>
+        </div>
       </div>
-
-      </div>
-    )
+    );
   }
 
   return (
