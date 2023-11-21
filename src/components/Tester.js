@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Task, { useStato, useStatodis } from './Context';
 import { animated, useSpring, useSprings, useInView, SpringValue, config} from '@react-spring/web'
-
 
 function Testers(){
 
@@ -19,6 +18,14 @@ function Testers(){
 
   let present = presents[0][0]
   let present1 = presents[0][1]
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "instant",
+    });
+  }, []);
 
   return (
     <div className="bg-primary" style={{ paddingTop: "8vh" }}>
@@ -54,7 +61,7 @@ function Testers(){
               </p>
             </animated.div>
             <div className="col-5">
-              <animated.img className="img-fluid" style={{ x: present1.x}}
+              <animated.img className="img-fluid" style={{ x: present1.x }}
                 src={cont.photo}
               />
             </div>

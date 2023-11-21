@@ -27,17 +27,17 @@ function Quinto(){
   return(
     <div>
 
-      <h1 className="text-center text-secondary righteous pt-3">
+      <h1 className="text-center text-secondary righteous pt-4">
         Our Testimonials
       </h1>
 
       <div className="bg-secondary">
 
-        <Carousel className="py-3" style={{  }}>
+        <Carousel className="py-3">
           {stato.people.map((cont, index)=>(
 
             <Carousel.Item key={index} interval={2000}>
-              <Link to="testimonials">
+              <Link to="testimonials" style={{ textDecoration: "none" }}>
               <div className="row mx-0 d-flex align-items-center">
                 <div className="col-4">
                   <img src={cont.photo} className="img-fluid border-success" />

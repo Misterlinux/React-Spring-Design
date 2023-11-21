@@ -33,7 +33,7 @@ function Quarto(){
   return(
     <div style={{  }}>
       
-      <h1 className="righteous text-center text-danger p-2"> 
+      <h1 className="righteous text-center text-danger pt-4"> 
         Our Menu 
       </h1>
 

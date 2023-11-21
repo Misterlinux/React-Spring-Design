@@ -32,7 +32,7 @@ import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 
     return(
       <>
-      <div style={{ height: "60vh" }} >
+      <div style={{ height: "55vh" }} >
 
         <div className="chef"></div>
 
