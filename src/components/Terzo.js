@@ -1,14 +1,7 @@
-import { useEffect } from 'react';
-import { animated, useSpring, useSprings, useInView } from '@react-spring/web'
+import { animated, useSprings, useInView } from '@react-spring/web'
 import Task, { useStato, useStatodis } from './Context';
 import {
-  BrowserRouter as Router,
   Link,
-  Route,
-  useParams,
-  Routes,
-  Outlet,
-  useRouteError
 } from "react-router-dom";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -28,7 +21,6 @@ function Terzo(){
   }), [seeSect])
 
   let stato = useStato()
-  let dispatch = useStatodis()
 
   return(
     <div>

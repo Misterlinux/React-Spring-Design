@@ -7,26 +7,16 @@ const Statodis = createContext(null);
 export default function Task({children}) {
 
   function reducer(state, action){
-    switch (action.type){
-      case "increment": {
-        return {
-          age: state.age + 1,
-          name: state.name
-        }
-      }
-    }
     throw Error('Unknown action: ' + action.type);
   }
 
   const initialState = { age: 42, name: "testo", fires: fuochi(), meals: menu(), people: crowd()};
-  const [instate, dispatch] = useReducer(reducer, initialState);
+  const [instate] = useReducer(reducer, initialState);
   
   return (
     <div>
       <Stato.Provider value={instate}>
-        <Statodis.Provider value={dispatch} >
-          {children}
-        </Statodis.Provider>
+        {children}
       </Stato.Provider>
     </div>
   );

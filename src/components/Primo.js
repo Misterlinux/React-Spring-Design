@@ -1,15 +1,5 @@
-import { useState, useRef } from "react";
-import {
-    BrowserRouter as Router,
-    Link,
-    Route,
-    useParams,
-    Routes,
-    Outlet,
-    useRouteError
-} from "react-router-dom";
+import react from "react";
 import { animated, useSpring, useTransition, useSprings, useInView} from '@react-spring/web'
-import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 
   function Primo(){
 
@@ -47,7 +37,6 @@ import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 
             <animated.div className="fonte position-relative" style={lista[1]}>
               Louis Lavagne
-
               <animated.div className="linea" style={{width: linea.width}}></animated.div>
             </animated.div>
 

@@ -1,17 +1,13 @@
 import { useState } from "react";
-import Task, { useStato, useStatodis } from './Context';
+import Task, { useStato } from './Context';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
 import Modal from 'react-bootstrap/Modal';
-
-var classNames = require('classnames');
 
 function Quarto(){
 
   //I guess we can't use percentage if we want the content to be overflow limited
   let stato = useStato()
-  let dispatch = useStatodis()
   
   let [user, setUser] = useState(0)
 
@@ -19,19 +15,13 @@ function Quarto(){
     setUser(index)
   }
 
-  let btnClass = classNames({
-    btn: true,
-    "btn-primary" : user % 2 == 0,
-    "btn-success" : user % 2 == 1,
-  });
-
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
   return(
-    <div style={{  }}>
+    <div>
       
       <h1 className="righteous text-center text-danger pt-4"> 
         Our Menu 
@@ -85,8 +75,6 @@ function Quarto(){
           <p className="meno" style={{ overflowY: "scroll", height: "45%" }}> {stato.meals[user].text} </p>
         </div>
       </div>
-
-
 
     </div>
   )

@@ -2,22 +2,18 @@ import {
   BrowserRouter as Router,
   Link,
   Route,
-  useParams,
   Routes,
-  Outlet,
-  useRouteError
 } from "react-router-dom";
 import Task, { useStato, useStatodis } from "./components/Context"
 import 'bootstrap/dist/css/bootstrap.css';
-import "./App.css"
-import Homepage from "./components/Homepage";
-import Secondo from "./components/Secondo";
-import Terzo from "./components/Terzo";
-import Contact from "./components/Contact";
 import "./Global.scss"
-import Footer from "./components/Footer";
+import "./App.css"
+
+import Homepage from "./components/Homepage";
+import Contact from "./components/Contact";
 import Values from "./components/Values";
 import Testers from "./components/Tester";
+import Footer from "./components/Footer";
 
 function App() {
 
@@ -50,10 +46,6 @@ function App() {
 
   return (
     <div>
-
-      <Task>
-        <Sees/>
-      </Task>
 
       <Task>
       <Router>

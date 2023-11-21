@@ -1,17 +1,7 @@
-import {
-  BrowserRouter as Router,
-  Link,
-  Route,
-  useParams,
-  Routes,
-  Outlet,
-  useRouteError
-} from "react-router-dom";
 import { animated, useSpring, useInView} from '@react-spring/web'
-import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUtensils, faBurger, faMugHot, faIceCream, faMartiniGlassCitrus, faPizzaSlice, faEnvelope } 
+import { faUtensils, faBurger, faMugHot, faIceCream, faMartiniGlassCitrus, faPizzaSlice } 
 from "@fortawesome/free-solid-svg-icons";
 
 function Secondo(){

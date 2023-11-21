@@ -1,13 +1,12 @@
 import React, { useEffect } from "react";
 import Task, { useStato, useStatodis } from './Context';
-import { animated, useSpring, useSprings, useInView, SpringValue, config} from '@react-spring/web'
+import { animated, useSprings, config} from '@react-spring/web'
 
 function Testers(){
 
   let stato = useStato()
-  let dispatch = useStatodis()
 
-  let presents= useSprings(2, i => ({
+  let [[uno, due], preApi] = useSprings(2, i => ({
     from: {x: -300, y: -400, opacity: 0, back: i ? "#9BA8D9" : "#3B4EA1" },
     to: [
       {x: 0},
@@ -15,9 +14,6 @@ function Testers(){
     ],
     config: config.wobbly
   }))
-
-  let present = presents[0][0]
-  let present1 = presents[0][1]
 
   useEffect(() => {
     window.scrollTo({
@@ -28,21 +24,21 @@ function Testers(){
   }, []);
 
   return (
-    <div className="bg-primary" style={{ paddingTop: "8vh" }}>
+    <div className="bg-primary" style={{ paddingTop: "6vh" }}>
       <h1 className="text-center righteous text-secondary py-3">
         Our Testimonials
       </h1>
 
       {stato.people.map((cont, index)=> 
         index % 2 ? (
-          <animated.div className="row mx-0 d-flex align-items-center py-4" 
-            style={{ backgroundColor: present.back }}>
+          <animated.div className="row mx-0 d-flex align-items-center py-4" key={index}
+            style={{ backgroundColor: uno.back }}>
             <div className="col-5">
-              <animated.img className="img-fluid" style={{ x: present.x }}
+              <animated.img className="img-fluid" style={{ x: uno.x }}
                 src={cont.photo}
               />
             </div>
-            <animated.div className="col-7" style={{ y: present.y, opacity: present.opacity }}>
+            <animated.div className="col-7" style={{ y: uno.y, opacity: uno.opacity }}>
               <h2>{cont.name}</h2>
               <p>{cont.job}</p>
               <p>
@@ -51,9 +47,9 @@ function Testers(){
             </animated.div>
           </animated.div>
         ) : (
-          <animated.div className="row mx-0 d-flex align-items-center py-4"
-            style={{ backgroundColor: present1.back }}>
-            <animated.div className="col-7 text-success" style={{ y: present1.y, opacity: present1.opacity }}>
+          <animated.div className="row mx-0 d-flex align-items-center py-4" key={index}
+            style={{ backgroundColor: due.back }}>
+            <animated.div className="col-7 text-success" style={{ y: due.y, opacity: due.opacity }}>
               <h2>{cont.name}</h2>
               <p>{cont.job}</p>
               <p className="">
@@ -61,7 +57,7 @@ function Testers(){
               </p>
             </animated.div>
             <div className="col-5">
-              <animated.img className="img-fluid" style={{ x: present1.x }}
+              <animated.img className="img-fluid" style={{ x: due.x }}
                 src={cont.photo}
               />
             </div>

@@ -1,16 +1,14 @@
 import React, {useEffect} from "react";
-import { animated, useSpring, useSprings, useInView, SpringValue, config} from '@react-spring/web'
+import { animated, useSprings, config} from '@react-spring/web'
 
 import Task, { useStato, useStatodis } from './Context';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFireBurner } from "@fortawesome/free-solid-svg-icons";
 
-
 function Values(){
 
   let stato = useStato()
-  let dispatch = useStatodis()
 
   let entra = useSprings(2, i =>({
     from: { x: i ? -400 : 400, backgroundColor: i ? "#E2AB9C" : "#D17961" },
@@ -24,8 +22,7 @@ function Values(){
 
   useEffect(() => {
     window.scrollTo({
-      top: 0,
-      left: 0,
+      top: 0, left: 0,
       behavior: "instant",
     });
   }, []);

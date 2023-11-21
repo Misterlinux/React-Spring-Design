@@ -1,13 +1,7 @@
-import { useState } from "react";
 import Task, { useStato, useStatodis } from './Context';
 import {
   BrowserRouter as Router,
   Link,
-  Route,
-  useParams,
-  Routes,
-  Outlet,
-  useRouteError
 } from "react-router-dom";
 
 import Carousel from 'react-bootstrap/Carousel';
@@ -15,14 +9,6 @@ import Carousel from 'react-bootstrap/Carousel';
 function Quinto(){
 
   let stato = useStato()
-  let dispatch = useStatodis()
-
-/*
-      <h1 className="text-center text-secondary righteous p-3">
-        Our Testimonials
-      </h1>
-
-*/
 
   return(
     <div>
