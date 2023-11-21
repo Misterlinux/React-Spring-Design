@@ -22,6 +22,14 @@ function Values(){
   }))
   let entrano = entra[0]
 
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "instant",
+    });
+  }, []);
+
   return (
     <div className="bg-success" style={{ paddingTop: "8vh" }}>
       <h1 className="text-center righteous text-secondary py-3">

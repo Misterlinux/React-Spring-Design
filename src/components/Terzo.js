@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { animated, useSpring, useSprings, useInView } from '@react-spring/web'
 import Task, { useStato, useStatodis } from './Context';
 import {
@@ -29,6 +30,19 @@ function Terzo(){
   let stato = useStato()
   let dispatch = useStatodis()
 
+  function sopra(){
+    console.log("vai sopra")
+
+  }
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth"
+    });
+  }, []);
+
   return(
     <div>
         
@@ -56,7 +70,7 @@ function Terzo(){
               <p> {cont.text} </p>
               <div className="text-center mb-2">
                 <Link to="values">
-                  <button className="btn btn-sm btn-danger text-white">See More</button>
+                  <button className="btn btn-sm btn-danger text-white" onClick={sopra}>See More</button>
                 </Link>
               </div>
             </div> 
