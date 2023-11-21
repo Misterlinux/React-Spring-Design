@@ -30,19 +30,6 @@ function Terzo(){
   let stato = useStato()
   let dispatch = useStatodis()
 
-  function sopra(){
-    console.log("vai sopra")
-
-  }
-
-  useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: "smooth"
-    });
-  }, []);
-
   return(
     <div>
         
@@ -52,7 +39,7 @@ function Terzo(){
 
         {stato.fires.map((cont, index)=>(
 
-          <div className="col-4 p-0">
+          <div className="col-4 p-0" key={index}>
             <div className="bg-secondary position-relative text-success p-3 d-flex justify-content-center align-item-center"
               style={{ height: "5em" }}>
 
@@ -70,7 +57,7 @@ function Terzo(){
               <p> {cont.text} </p>
               <div className="text-center mb-2">
                 <Link to="values">
-                  <button className="btn btn-sm btn-danger text-white" onClick={sopra}>See More</button>
+                  <button className="btn btn-sm btn-danger text-white" >See More</button>
                 </Link>
               </div>
             </div> 

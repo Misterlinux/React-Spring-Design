@@ -1,5 +1,14 @@
 import { useState } from "react";
 import Task, { useStato, useStatodis } from './Context';
+import {
+  BrowserRouter as Router,
+  Link,
+  Route,
+  useParams,
+  Routes,
+  Outlet,
+  useRouteError
+} from "react-router-dom";
 
 import Carousel from 'react-bootstrap/Carousel';
 
@@ -27,8 +36,8 @@ function Quinto(){
         <Carousel className="py-3" style={{  }}>
           {stato.people.map((cont, index)=>(
 
-            <Carousel.Item key={index} interval={1500}>
-
+            <Carousel.Item key={index} interval={2000}>
+              <Link to="testimonials">
               <div className="row mx-0 d-flex align-items-center">
                 <div className="col-4">
                   <img src={cont.photo} className="img-fluid border-success" />
@@ -44,6 +53,7 @@ function Quinto(){
                   </p>
                 </div>
               </div>
+              </Link>
 
               <br />
             </Carousel.Item>

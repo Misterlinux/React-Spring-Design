@@ -17,6 +17,7 @@ import Contact from "./components/Contact";
 import "./Global.scss"
 import Footer from "./components/Footer";
 import Values from "./components/Values";
+import Testers from "./components/Tester";
 
 function App() {
 
@@ -58,6 +59,7 @@ function App() {
         <Routes>
           <Route path="*" element={<Homepage/>} />
           <Route path="contact/*" element={<Contact />} />
+          <Route path="testimonials/*" element={<Testers />} />
           <Route path="values/*" element={<Values />} />
         </Routes>
 
