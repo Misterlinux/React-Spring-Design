@@ -15,6 +15,7 @@ p, h1, h2{
 
 .taglia{
   clip-path: polygon(0% 0%, 8% 100%, 92% 100%, 100% 0%);
+  width: 75%;
 }
 
 .righteous{
@@ -41,7 +42,6 @@ p, h1, h2{
   background-color: var(--danger);
 }
 
-
 .chef{
   background-image: url("./images/chef.jpeg");
   background-size: cover;
@@ -55,7 +55,12 @@ p, h1, h2{
 
 /* ----------------------- */
 
+.skills{
+  width: 90%
+}
+
 .lato{
+  left: 0;
   transform: rotate(-90deg);
   height: 4em /* change it in media query */
 }
@@ -109,4 +114,45 @@ p, h1, h2{
   background-image: url("./images/chef.jpeg");
   background-size: cover;
   background-position: center center;
+}
+
+@media only screen and (min-width: 800px) {
+
+  .taglia{
+    width: 50%;
+  } 
+
+  .chef{
+    background-position: center 27%;
+  }
+
+  /* --secondo-- */
+
+  .skills{
+    width: 70%;
+  }
+
+  .lato{
+    left: 8%;
+    height: 2em;
+  }
+
+  /* --quarto-- */
+
+  .noscroller::-webkit-scrollbar{
+    width: 0;
+    height: 0;
+  }
+
+  /* --footer-- */
+  .circleIcon{
+    height: 3em;
+    width: 3em;
+  }
+
+  .circleIcon + h2{
+    font-size: 1.5em;
+  }
+
+
 }

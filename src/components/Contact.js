@@ -106,11 +106,11 @@ function Contact(){
             <p style={{ fontSize: "0.8em" }}><b>LouisLa@cmail.com</b></p>
           </div>
         </div>
-
       </div>
 
-      <form className="row mx-0 py-3 bg-danger pb-4" onSubmit={ vediamo } style={{ height: "55vh" }}>
-        <div className="col-5 p-2 d-flex flex-column justify-content-center">
+      <form className="row mx-0 justify-content-center bg-danger py-3 pb-4" onSubmit={ vediamo } style={{ height: "55vh" }}>
+
+        <div className="col-5 col-md-4 p-2 d-flex flex-column justify-content-center">
           <div className='form-floating'>
             <input name='name' id="nome" required
               type="text" className="form-control" placeholder='name'/>
@@ -123,14 +123,13 @@ function Contact(){
           </div>
         </div>
 
-        <div className="col-7 p-2 d-flex align-items-center justify-content-center">
-          <div>
-            <textarea name='message' id="message" rows="4" className="form-control" placeholder='Write your commission' required>
-            </textarea>
-          </div>
+        <div className="col-7 col-md-6 p-2 d-flex align-items-center justify-content-center">
+          <textarea name='message' id="message" rows="4" className="form-control" 
+            placeholder='Write your commission' required>
+          </textarea>
         </div>
 
-        <div className='text-center'>
+        <div className='text-center col-11 col-md-10'>
           <label htmlFor="follow" className="form-label text-white d-flex justify-content-center alin-items-center">
             Rate the website
             { foodani() }
@@ -139,7 +138,7 @@ function Contact(){
             min="0" max="10" steps="1" type="range" className="form-range" />
         </div>
       
-        <div className="text-center">
+        <div className="text-center col-10">
           <button type='submit' className="btn p-3 btn-secondary text-white">Send</button>
         </div>
       </form>

@@ -28,15 +28,16 @@ function Values(){
   }, []);
 
   return (
-    <div className="bg-success" style={{ paddingTop: "8vh" }}>
+    <div className="bg-success d-flex flex-column align-items-center" style={{ paddingTop: "8vh" }}>
       <h1 className="text-center righteous text-secondary py-3">
         Our core values
       </h1>
 
       {stato.fires.map((cont, index) =>
         index % 2 ? (
-          <animated.div className="py-4 row mx-0" style={entrano[0]} key={index}>
-            <div className="col-4 align-self-center position-relative d-flex align-items-center justify-content-center">
+          <animated.div className="py-4 row mx-0 col-md-10" style={entrano[0]} key={index}>
+
+            <div className="col-4 col-md-2 position-relative d-flex align-items-center justify-content-center">
               <animated.div
                 className="position-absolute border border-4 border-primary p-3"
                 style={{ height: "5.5em", width: "5.5em" }}
@@ -46,7 +47,7 @@ function Values(){
                 <FontAwesomeIcon className="fs-1" icon={faFireBurner} />
               </div>
             </div>
-            <div className="col-8">
+            <div className="col-8 col-md-10">
               <h3 className="text-start text-secondary"> {cont.name} </h3>
               <p>
                 {cont.text}
@@ -54,14 +55,14 @@ function Values(){
             </div>
           </animated.div>
         ) : (
-          <animated.div className="py-4 row mx-0" style={entrano[1]} key={index}>
-            <div className="col-8">
+          <animated.div className="py-4 row mx-0 col-md-10" style={entrano[1]} key={index}>
+            <div className="col-8 col-md-10">
               <h3 className="text-start text-secondary"> {cont.name} </h3>
               <p>
                 {cont.text}
               </p>
             </div>
-            <div className="col-4 align-self-center position-relative d-flex align-items-center justify-content-center">
+            <div className="col-4 col-md-2 position-relative d-flex align-items-center justify-content-center">
               <animated.div
                 className="position-absolute border border-4 border-primary p-3"
                 style={{ height: "5.5em", width: "5.5em" }}

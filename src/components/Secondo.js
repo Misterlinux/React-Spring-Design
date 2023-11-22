@@ -18,10 +18,10 @@ function Secondo(){
   return(
     <div>
 
-      <div className="d-flex justify-content-end position-relative mt-2">
+      <div className="d-flex justify-content-end justify-content-md-center position-relative mt-2">
         
-        <animated.h4 ref={about} className="lato position-absolute" style={{ left: 0, ...drop}}>About me</animated.h4>
-        <div className="border-start border-danger border-3 p-2" style={{ width: "90%" }}>
+        <animated.h4 ref={about} className="lato position-absolute" style={{ ...drop}}>About me</animated.h4>
+        <div className="border-start border-danger border-3 p-2 skills" >
           <div className="bg-secondary text-white p-2">
             <h5>Master chef of 2nd grade</h5>
             <p>Avaiable for the following services</p>

@@ -27,8 +27,8 @@ function Quarto(){
         Our Menu 
       </h1>
 
-      <div className="row mx-0" style={{ height: "60vh" }}>
-        <div className="col-4 p-0 d-flex flex-column" style={{ overflowY: "scroll", height: "inherit" }}>
+      <div className="row mx-0 justify-content-center" style={{ height: "60vh" }}>
+        <div className="col-4 col-md-2 p-0 d-flex flex-column noscroller" style={{ overflowY: "scroll", height: "inherit" }}>
         
           {stato.meals.map((cont, index)=>(
 
@@ -51,28 +51,48 @@ function Quarto(){
           }
 
         </div>
-        <div className="col-8 bg-success py-2" style={{ height: "60vh" }}>
+        <div className="col-8 col-md-7 bg-success py-2" style={{ height: "60vh" }}>
 
-          <div className="d-flex back" style={{ height: "33%", backgroundImage: `url(${stato.meals[user].img})` }}
-            onClick={handleShow}> 
+          <div className="d-none d-md-flex mx-0 " style={{height: "inherit"}}>
+            <div className="col-5">
+              <div className="d-flex back" style={{ height: "95%", backgroundImage: `url(${stato.meals[user].img})` }}> 
+              </div>
+            </div>
+            <div className="col-7 px-3">
+              
+              <h3 className="righteous my-2"> 
+                {stato.meals[user].name} 
+                <FontAwesomeIcon className="mx-2" icon={ stato.meals[user].icon } />
+              </h3>
+
+              <h5> {stato.meals[user].desc} </h5>
+              <p className="meno" style={{ overflowY: "scroll", height: "45%" }}> {stato.meals[user].text} </p>
+            </div>
           </div>
 
-          <Modal className="d-flex justify-content-center align-items-center" show={show} onHide={handleClose}>
-            <Modal.Header closeButton>
-            </Modal.Header>
+          <div className="d-sm-block d-md-none" style={{height: "inherit"}}>
+            <div className="d-flex back" style={{ height: "33%", backgroundImage: `url(${stato.meals[user].img})` }}
+              onClick={handleShow}> 
+            </div>
 
-            <Modal.Body className="d-flex justify-content-center">
-              <img src={stato.meals[user].img} className="img-fluid" />
-            </Modal.Body>
-          </Modal>
+            <Modal className="d-flex justify-content-center align-items-center" show={show} onHide={handleClose}>
+              <Modal.Header closeButton>
+              </Modal.Header>
 
-          <h3 className="righteous my-2"> 
-            {stato.meals[user].name} 
-            <FontAwesomeIcon className="mx-2" icon={ stato.meals[user].icon } />
-          </h3>
+              <Modal.Body className="d-flex justify-content-center">
+                <img src={stato.meals[user].img} className="img-fluid" />
+              </Modal.Body>
+            </Modal>
 
-          <h5> {stato.meals[user].desc} </h5>
-          <p className="meno" style={{ overflowY: "scroll", height: "45%" }}> {stato.meals[user].text} </p>
+            <h3 className="righteous my-2"> 
+              {stato.meals[user].name} 
+              <FontAwesomeIcon className="mx-2" icon={ stato.meals[user].icon } />
+            </h3>
+
+            <h5> {stato.meals[user].desc} </h5>
+            <p className="meno" style={{ overflowY: "scroll", height: "45%" }}> {stato.meals[user].text} </p>
+          </div>
+
         </div>
       </div>
 

@@ -25,13 +25,13 @@ function Terzo(){
   return(
     <div>
         
-      <div className="row mx-0" ref={sect}>
+      <div className="row mx-0 justify-content-center" ref={sect}>
 
         <h1 className="text-center fonte mt-2 py-2">Our Principles</h1>
 
         {stato.fires.map((cont, index)=>(
 
-          <div className="col-4 p-0" key={index}>
+          <div className="col-4 col-md-3 p-0" key={index}>
             <div className="bg-secondary position-relative text-success p-3 d-flex justify-content-center align-item-center"
               style={{ height: "5em" }}>
 

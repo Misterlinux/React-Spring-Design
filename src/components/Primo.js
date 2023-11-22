@@ -30,7 +30,7 @@ import { animated, useSpring, useTransition, useSprings, useInView} from '@react
 
         <div ref={intro} className="d-flex justify-content-center align-items-center" style={{ height: "100%"}}>
           <div className="d-block text-center">
-
+            
             <animated.div className="fonte" style={lista[0]}>
               Hello my name is
             </animated.div>

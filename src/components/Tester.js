@@ -24,21 +24,22 @@ function Testers(){
   }, []);
 
   return (
-    <div className="bg-primary" style={{ paddingTop: "6vh" }}>
+    <div className="bg-primary d-flex flex-column align-items-center" style={{ paddingTop: "6vh" }}>
       <h1 className="text-center righteous text-secondary py-3">
         Our Testimonials
       </h1>
 
       {stato.people.map((cont, index)=> 
         index % 2 ? (
-          <animated.div className="row mx-0 d-flex align-items-center py-4" key={index}
+          <animated.div className="row mx-0 d-flex align-items-center col-md-10 py-4" key={index}
             style={{ backgroundColor: uno.back }}>
-            <div className="col-5">
+
+            <div className="col-5 col-md-4 d-flex justify-content-center">
               <animated.img className="img-fluid" style={{ x: uno.x }}
                 src={cont.photo}
               />
             </div>
-            <animated.div className="col-7" style={{ y: uno.y, opacity: uno.opacity }}>
+            <animated.div className="col-7 col-md-8" style={{ y: uno.y, opacity: uno.opacity }}>
               <h2>{cont.name}</h2>
               <p>{cont.job}</p>
               <p>
@@ -47,16 +48,16 @@ function Testers(){
             </animated.div>
           </animated.div>
         ) : (
-          <animated.div className="row mx-0 d-flex align-items-center py-4" key={index}
+          <animated.div className="row mx-0 d-flex align-items-center col-md-10 py-4" key={index}
             style={{ backgroundColor: due.back }}>
-            <animated.div className="col-7 text-success" style={{ y: due.y, opacity: due.opacity }}>
+            <animated.div className="col-7 col-md-8 text-success" style={{ y: due.y, opacity: due.opacity }}>
               <h2>{cont.name}</h2>
               <p>{cont.job}</p>
               <p className="">
                 {cont.text}
               </p>
             </animated.div>
-            <div className="col-5">
+            <div className="col-5 col-md-4 d-flex justify-content-center">
               <animated.img className="img-fluid" style={{ x: due.x }}
                 src={cont.photo}
               />

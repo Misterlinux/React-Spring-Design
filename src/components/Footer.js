@@ -6,7 +6,7 @@ function footer(){
 
   
   return(
-    <div className="position-relative d-flex flex-column align-items-center justify-content-center" style={{ height: "15vh", backgroundColor: "black" }}>
+    <div className="position-relative d-flex flex-column align-items-center justify-content-center pt-3" style={{ height: "15vh", backgroundColor: "black" }}>
 
       <div className="d-flex row mx-0 mb-4" style={{ width: "65%" }}>
 
@@ -33,9 +33,7 @@ function footer(){
 
       <p className=" text-success position-absolute bottom-0" style={{ height: "1em", fontSize: "0.7em" }}>
         Website by 
-        <a className="text-decoration-none text-danger" href="https://github.com/Misterlinux?tab=repositories"> 
-          Angelo Zarate, 
-        </a>
+        <a className="text-decoration-none text-danger" href="https://github.com/Misterlinux?tab=repositories"> Angelo Zarate, </a>
         using 
         <a className="text-decoration-none text-danger" href="https://react-spring.dev/"> React-Spring  </a>
         and 

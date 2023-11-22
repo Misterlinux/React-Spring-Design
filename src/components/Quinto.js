@@ -17,14 +17,15 @@ function Quinto(){
         Our Testimonials
       </h1>
 
-      <div className="bg-secondary">
+      <div className="d-flex justify-content-center">
 
-        <Carousel className="py-3">
+        <Carousel className="py-3 col-12 col-md-9 bg-secondary ">
           {stato.people.map((cont, index)=>(
 
             <Carousel.Item key={index} interval={2000}>
               <Link to="testimonials" style={{ textDecoration: "none" }}>
               <div className="row mx-0 d-flex align-items-center">
+
                 <div className="col-4">
                   <img src={cont.photo} className="img-fluid border-success" />
                   <div className="text-center text-success">
@@ -38,6 +39,7 @@ function Quinto(){
                     {cont.text}
                   </p>
                 </div>
+
               </div>
               </Link>
 
