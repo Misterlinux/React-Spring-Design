@@ -71,9 +71,9 @@ let meals = [
   },
   {
     name: "Middle muffin MIdway",
-    desc: "What teh bakery hides frm you, without ou knowing",
+    desc: "What the bakery hides from you",
     img: "https://i.pinimg.com/236x/f2/ce/51/f2ce5192f9ee7e9dd609a221843c2936.jpg",
-    icon: "",
+    icon: faDrumstickBite,
     text: `Lorem ipsum dolor sit amet consectetur adipisicing elit. 
     Aut dolorum, repudiandae quas impedit minus, ipsa aliquid non 
     obcaecati culpa dolorem, recusandae nam! Numquam eius assumenda officiis est odio et incidunt!`

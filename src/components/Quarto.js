@@ -32,20 +32,20 @@ function Quarto(){
         
           {stato.meals.map((cont, index)=>(
 
-            <div className={`${(index == user) ? "bg-success" : "bg-danger"} p-2 d-flex align-items-center justify-content-center flex-column border-success border-bottom border-1`}
+            <div className={`${(index == user) ? "bg-success" : "bg-danger"} p-2 d-flex align-items-start justify-content-center flex-column border-success border-bottom border-1`}
               onClick={()=>( reading(index) )}
               style={{ height: "20vh" }} key={index}>
-              
+            
+
               <div className="row mx-0 mb-2 d-flex align-items-center">
-                <div className="col-3 p-0 d-flex align-items-center">
-                  <img width="40" height="35" className="img-fluid rounded" src={cont.img}></img>
-                </div>
-                <div className="col-9 p-0 d-flex align-items-center">
+                <div className="p-0 d-flex align-items-center">
+                  <FontAwesomeIcon className="mx-1" icon={ cont.icon } />
                   <p className="m-0 ms-1 righteous"> {cont.name} </p>
                 </div>
               </div>
 
               <p style={{ overflow: "hidden" }}><b> {cont.desc} </b></p>
+
             </div>
           ))
           }
@@ -66,7 +66,8 @@ function Quarto(){
               </h3>
 
               <h5> {stato.meals[user].desc} </h5>
-              <p className="meno" style={{ overflowY: "scroll", height: "45%" }}> {stato.meals[user].text} </p>
+              <p className="meno" > {stato.meals[user].text} </p>
+              
             </div>
           </div>
 
@@ -89,8 +90,8 @@ function Quarto(){
               <FontAwesomeIcon className="mx-2" icon={ stato.meals[user].icon } />
             </h3>
 
-            <h5> {stato.meals[user].desc} </h5>
-            <p className="meno" style={{ overflowY: "scroll", height: "45%" }}> {stato.meals[user].text} </p>
+            <p className="righteous"><b>{stato.meals[user].desc} </b></p>
+            <p className="meno"> {stato.meals[user].text} </p>
           </div>
 
         </div>

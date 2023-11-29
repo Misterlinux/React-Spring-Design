@@ -78,6 +78,11 @@ p, h1, h2{
   background-position: center center;
 }
 
+.meno{
+  overflow-y: scroll;
+  height: 45%;
+}
+
 .meno::-webkit-scrollbar{
   width: 0;
   height: 0;
@@ -116,6 +121,12 @@ p, h1, h2{
   background-position: center center;
 }
 
+@media only screen and (max-width: 480px) {
+  .meno{
+    height: 33%;
+  }
+}
+
 @media only screen and (min-width: 800px) {
 
   .taglia{
@@ -142,6 +153,13 @@ p, h1, h2{
   .noscroller::-webkit-scrollbar{
     width: 0;
     height: 0;
+  }
+
+  /* --quinto-- */
+
+  .meno{
+    overflow-y: scroll;
+    height: 70%;
   }
 
   /* --footer-- */
