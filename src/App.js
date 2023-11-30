@@ -27,18 +27,24 @@ function App() {
     return (
       <div className="d-flex justify-content-center">
         <div
-          className="position-absolute taglia d-flex bg-secondary justify-content-around px-4 py-2"
-          style={{ zIndex: 2, textDecoration: "none"}}
+          className="position-absolute taglia bg-secondary px-4 py-2 container-fluid row mx-0"
         >
-          <Link to="/">
-            <div className="text-success">Home</div>
+          <Link to="/" className="col-4">
+            <div className="text-success text-center">
+              Home
+            </div>
           </Link>
-          <Link to="testimonials">
-            <div className="text-success">Patners</div>
+          <Link to="/testimonials" className="col-4 border-end border-start border-success border-1">
+            <div className="text-success text-center">
+              Patners
+            </div>
           </Link>
-          <Link to="contact">
-            <div className="text-success">Contact</div>
+          <Link to="/contact" className="col-4">
+            <div className="text-success text-center">
+              Contact
+            </div>
           </Link>
+
         </div>
       </div>
     );
