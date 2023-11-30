@@ -36,7 +36,7 @@ function Quinto(){
                 <div className="col-8 text-danger d-flex flex-column justify-content-center p-0" 
                   style={{ height: "32vh" }}>
                   <h3> {cont.name} </h3>
-                  <p className="text-success" style={{ height: "25vh" , overflowY: "hidden" }}>
+                  <p className="text-success modaltext" style={{ height: "25vh" , overflowY: "scroll" }}>
                     {cont.text}
                   </p>
                 </div>

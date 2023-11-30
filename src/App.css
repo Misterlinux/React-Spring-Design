@@ -95,6 +95,16 @@ p, h1, h2{
 
 /* carousel */
 
+.modaltext{
+  height: 25vh;
+  overflow-y: scroll;
+}
+
+.modaltext::-webkit-scrollbar{
+  width: 0;
+  height: 0;
+}
+
 .carousel .carousel-indicators .active{
   background-color: var(--danger);
 }
