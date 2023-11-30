@@ -92,20 +92,23 @@ function Contact(){
           <p>Master chef of 2nd level</p>
         </div>
 
-        <div className="col-12 row mx-0 py-2">
-          <div className="col-4 d-flex flex-column justify-content-center">
-            <p className='m-0'>Works for:</p>
-            <p style={{ fontSize: "0.8em" }}><b>Catering SpA </b></p>
-          </div>
-          <div className="col-4 d-flex flex-column justify-content-center p-0">
-            <p className='m-0'>Phone</p>
-            <p style={{ fontSize: "0.8em" }}><b>342-126344001</b></p>
-          </div>
-          <div className="col-4 d-flex flex-column justify-content-center p-0">
-            <p className='m-0'>Email</p>
-            <p style={{ fontSize: "0.8em" }}><b>LouisLa@cmail.com</b></p>
+        <div className="d-flex justify-content-center">
+          <div className="row col-12 col-md-10 mx-0 py-2">
+            <div className="col-4 d-flex flex-column justify-content-center">
+              <p className='m-0'>Works for:</p>
+              <p style={{ fontSize: "0.8em" }}><b>Catering SpA </b></p>
+            </div>
+            <div className="col-4 d-flex flex-column justify-content-center p-0">
+              <p className='m-0'>Phone</p>
+              <p style={{ fontSize: "0.8em" }}><b>342-126344001</b></p>
+            </div>
+            <div className="col-4 d-flex flex-column justify-content-center p-0">
+              <p className='m-0'>Email</p>
+              <p style={{ fontSize: "0.8em" }}><b>LouisLa@cmail.com</b></p>
+            </div>
           </div>
         </div>
+
       </div>
 
       <form className="row mx-0 justify-content-center bg-danger py-3 pb-4" onSubmit={ vediamo } style={{ height: "55vh" }}>
